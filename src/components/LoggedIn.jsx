@@ -1,19 +1,18 @@
-
-
-
-
 import React from 'react'
 import Button from './Button'
 
-const LoggedIn = () => {
+const LoggedIn = ({ toggleLogIn }) => {
+    const handleClick = () => {
+        toggleLogIn();
+    };
 
 
     return (
         <>
             <h1>Logged in</h1>
-            <Button />
+            <Button toggleLogIn={toggleLogIn} />
         </>
-    )
-}
+    );
+};
 
-export default LoggedIn
+export default LoggedIn;
